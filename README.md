@@ -1,5 +1,7 @@
 # JWT Decode
 
+[![Build Status](https://travis-ci.org/micahhausler/jwtdecode.svg?branch=master)](https://travis-ci.org/micahhausler/jwtdecode)
+
 Decodes JWT tokens without verification of keys.
 
 ## Example
