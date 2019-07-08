@@ -1,0 +1,13 @@
+language: go
+sudo: false
+env:
+  global:
+    - GO111MODULE=on
+go:
+  - 1.12.x
+go_import_path: github.com/micahhausler/jwtdecode
+install:
+  - go get golang.org/x/tools/cmd/cover
+script:
+  - make cover
+  - bash <(curl -s https://codecov.io/bash)

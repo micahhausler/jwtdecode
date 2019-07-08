@@ -1,0 +1,25 @@
+{
+    "alg": "RS256",
+    "kid": ""
+}
+{
+    "aud": [
+        "sts.amazonaws.com"
+    ],
+    "exp": 1560972441,
+    "iat": 1560886041,
+    "iss": "https://kubernetes.default.svc.cluster.local",
+    "kubernetes.io": {
+        "namespace": "default",
+        "pod": {
+            "name": "nginx",
+            "uid": "179ae35e-91ff-11e9-9f54-064b8fba0570"
+        },
+        "serviceaccount": {
+            "name": "default",
+            "uid": "7a7a6e5d-8655-11e9-9925-0aaaac1aee42"
+        }
+    },
+    "nbf": 1560886041,
+    "sub": "system:serviceaccount:default:default"
+}
