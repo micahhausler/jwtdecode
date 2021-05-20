@@ -51,6 +51,12 @@ func TestDecode(t *testing.T) {
 			"./test_fixtures/not-a-token.jwt-output",
 		},
 		{
+			"Empty body",
+			[]string{"./test_fixtures/invalid-malformed-body.jwt"},
+			fmt.Errorf("No encodings passed: illegal base64 data at input byte 2"),
+			"./test_fixtures/invalid-json.jwt-output",
+		},
+		{
 			"Invalid json",
 			[]string{"./test_fixtures/invalid-json.jwt"},
 			fmt.Errorf("Could not unmarshal payload: invalid character '}' looking for beginning of value"),

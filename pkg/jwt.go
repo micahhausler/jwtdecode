@@ -100,7 +100,7 @@ func (d *TokenDecoder) b64decode(data []byte) ([]byte, error) {
 		if err != nil && i == len(encodings)-1 {
 			return nil, errors.Wrap(err, "No encodings passed")
 		}
-		if len(dst) > 0 {
+		if len(dst) > 0 && l > 0 {
 			if dst[l-1] != byte('}') {
 				continue
 			}
