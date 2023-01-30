@@ -5,9 +5,10 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
-	"github.com/pkg/errors"
 	"io"
 	"io/ioutil"
+
+	"github.com/pkg/errors"
 )
 
 // DecodeFiles reads a list of filenames and writes the decoded tokens to
