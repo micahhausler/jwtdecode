@@ -62,6 +62,12 @@ func TestDecode(t *testing.T) {
 			fmt.Errorf("Could not unmarshal payload: invalid character '}' looking for beginning of value"),
 			"./test_fixtures/invalid-json.jwt-output",
 		},
+		{
+			"Invalid file",
+			[]string{"./does-not-exist"},
+			fmt.Errorf("open ./does-not-exist: no such file or directory"),
+			"",
+		},
 	}
 
 	for _, c := range cases {
