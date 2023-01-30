@@ -1,8 +1,8 @@
 # JWT Decode
 
-[![Build Status](https://travis-ci.org/micahhausler/jwtdecode.svg?branch=master)](https://travis-ci.org/micahhausler/jwtdecode)
+![Build Status](https://github.com/micahhausler/jwtdecode/actions/workflows/test.yml/badge.svg?branch=master)
 [![codecov](https://codecov.io/gh/micahhausler/jwtdecode/branch/master/graph/badge.svg)](https://codecov.io/gh/micahhausler/jwtdecode)
-[![Documentation](https://godoc.org/github.com/micahhausler/jwtdecode?status.svg)](http://godoc.org/github.com/micahhausler/jwtdecode)
+[![Documentation](https://pkg.go.dev/github.com/micahhausler/jwtdecode?status.svg)](http://pkg.go.dev/github.com/micahhausler/jwtdecode)
 
 Decodes JWT tokens without verification of keys.
 
