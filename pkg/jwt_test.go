@@ -52,7 +52,7 @@ func TestDecode(t *testing.T) {
 		},
 		{
 			"Empty body",
-			[]string{"./test_fixtures/invalid-malformed-body.jwt"},
+			[]string{"./test_fixtures/invalid-empty-body.jwt"},
 			fmt.Errorf("No encodings passed: illegal base64 data at input byte 2"),
 			"./test_fixtures/invalid-json.jwt-output",
 		},
@@ -67,6 +67,12 @@ func TestDecode(t *testing.T) {
 			[]string{"./does-not-exist"},
 			fmt.Errorf("open ./does-not-exist: no such file or directory"),
 			"",
+		},
+		{
+			"Invalid JSON header",
+			[]string{"./test_fixtures/invalid-truncated-header.jwt"},
+			fmt.Errorf("Could not unmarshal payload: invalid character '}' after object key"),
+			"./test_fixtures/invalid-json.jwt-output",
 		},
 	}
 
